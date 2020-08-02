@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+
+############################################################
+
+
+<menu id="apps-favorites-menu" label="♥  Favorites">
+
+ 
+ 
+<item label="Xterm">
+    <action name="Execute">
+      <command>xterm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+<item label="Atom">
+     <action name="Execute">
+      <command>atom</command>
+      <startupnotify>
+	<enabled>yes</enabled>
+	</startupnotify>
+       </action>
+     </item>
+
+<item label="Tilda">
+    <action name="Execute">
+      <command>tilda</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+ </menu>
+ 
+############################################################
+<menu id="app-menu" label="  Categories">
+
+
+<menu id="apps-accessories-menu" label="  Accessories">
+
+  <item label="  Calculator">
+    <action name="Execute">
+      <command>gnome-calculator</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Character Map">
+    <action name="Execute">
+      <command>kcharselect</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="遲  Ark File Archiver">
+    <action name="Execute">
+      <command>ark</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+</menu>
+
+############################################################
+
+<menu id="apps-editors-menu" label="  Text">
+
+  <item label="  Leafpad"
+	<action name="Execute">
+		<command>leafpad</command>
+		<startupnotify>
+		   <enabled>yes</enabled>
+		</startupnotify>
+	</action>
+  <item label="  GVim">
+    <action name="Execute">
+      <command>gvim</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>GVim</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Emacs">
+    <action name="Execute">
+      <command>emacs</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Emacs</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  GEdit">
+    <action name="Execute">
+      <command>gedit</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+</menu>
+
+############################################################
+
+<menu id="apps-term-menu" label="  Terminals">
+
+  <item label="  Rxvt Unicode">
+    <action name="Execute">
+      <command>urxvt</command>
+    </action>
+  </item>
+  <item label="  Kitty">
+    <action name="Execute">
+      <command>kitty</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Xfce Terminal">
+    <action name="Execute">
+      <command>xfce4-terminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Alacritty">
+    <action name="Execute">
+      <command>alacritty</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Xterm">
+    <action name="Execute"><command>xterm</command></action>
+  </item>
+
+</menu>
+
+############################################################
+
+<menu id="apps-net-menu" label="  Internet">
+
+  <item label="  Firefox">
+    <action name="Execute">
+      <command>firefox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Firefox</wmclass>
+      </startupnotify>
+    </action>
+    </item>
+  <item label="  Brave">
+    <action name="Execute">
+      <command>brave</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>Opera</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+
+</menu>
+
+############################################################
+
+<menu id="apps-office-menu" label="  Office">
+
+  <item label="  OpenOffice Base">
+    <action name="Execute">
+      <command>ooffice -base</command>
+    </action>
+  </item>
+  <item label="  OpenOffice Calc">
+    <action name="Execute">
+      <command>ooffice -calc</command>
+    </action>
+  </item>
+  <item label="  OpenOffice Draw">
+    <action name="Execute">
+      <command>ooffice -draw</command>
+    </action>
+  </item>
+  <item label="  OpenOffice Impress">
+    <action name="Execute">
+      <command>ooffice -impress</command>
+    </action>
+  </item>
+  <item label="  OpenOffice Math">
+    <action name="Execute">
+      <command>ooffice -math</command>
+    </action>
+  </item>
+  <item label="  OpenOffice Printer Administration">
+    <action name="Execute">
+      <command>ooffice-printeradmin</command>
+    </action>
+  </item>
+  <item label="  OpenOffice Writer">
+    <action name="Execute">
+      <command>ooffice -writer</command>
+    </action>
+  </item>
+
+</menu>
+
+############################################################
+
+<menu id="apps-multimedia-menu" label="  Multimedia">
+
+
+  <item label="  Rhythmbox">
+    <action name="Execute">
+      <command>rhythmbox</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  K3b">
+    <action name="Execute">
+      <command>k3b</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  MPlayer">
+    <action name="Execute">
+      <command>gmplayer</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+        <wmclass>MPlayer</wmclass>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Totem">
+    <action name="Execute">
+      <command>totem</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+</menu>
+
+<menu id="apps-fileman-menu" label="  File Managers">
+
+  <item label="  Nemo">
+    <action name="Execute">
+      <command>nemo</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Thunar">
+    <action name="Execute">
+      <command>Thunar</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  PCMan File Manager">
+    <action name="Execute">
+      <command>pcmanfm</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+</menu>
+
+<menu id="apps-graphics-menu" label="  Graphics">
+
+  <item label="  Gimp">
+    <action name="Execute">
+      <command>gimp</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Gwenview">
+    <action name="Execute">
+      <command>gwenview</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Dia Diagram Editor">
+    <action name="Execute">
+      <command>dia</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Inkscape">
+    <action name="Execute">
+      <command>inkscape</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+  </menu>
+
+</menu>
+
+<menu id="system-menu" label="  System">
+
+  <item label="  Obconf">
+    <action name="Execute">
+      <command>obconf</command>
+      <startupnotify><enabled>yes</enabled></startupnotify>
+    </action>
+  </item>
+  <item label="  Reconfigure..">
+    <action name="Reconfigure" />
+  </item>
+
+
+  <separator />
+  	<menu id="pretty-menu" label="  Appearance">
+
+<item label="Lxappearance">
+    <action name="Execute">
+      <command>lxappearance</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Picom">
+    <action name="Execute">
+      <command>picom --config ~/.config/Picom/picom.conf</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Polybar">
+    <action name="Execute">
+      <command>polybar -r acandy</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="Wallpaper">
+    <action name="Execute">
+      <command>nitrogen</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+  </menu>
+
+  	<menu id="dot-menu" label="  Dotfiles">
+
+  <item label="  RC">
+    <action name="Execute">
+      <command>leafpad ~/.config/openbox/rc.xml</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Menu">
+    <action name="Execute">
+      <command>leafpad ~/.config/openbox/menu.xml</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Polybar">
+    <action name="Execute">
+      <command>leafpad ~/.config/polybar/config</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Polywins">
+    <action name="Execute">
+      <command>leafpad ~/.config/polybar/polywins/polywins.sh</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Picom">
+    <action name="Execute">
+      <command>leafpad ~/.config/Picom/picom.conf</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Themerc">
+    <action name="Execute">
+      <command>leafpad ~/.themes/Alien-Candy/openbox-3/themerc</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  <item label="  Xresources">
+    <action name="Execute">
+      <command>leafpad ~/.xresources</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+  </menu>
+
+</menu>
+
+
+##########################################################
+<menu id="root-menu" label="Openbox 3">
+##########################################################
+ 
+
+
+<item label="  Nemo">
+    <action name="Execute">
+      <command>nemo</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+<item label="  Brave">
+    <action name="Execute">
+      <command>brave</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+<item label="  Terminal">
+    <action name="Execute">
+      <command>xfce4-terminal</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+<item label="🍂 Leafpad">
+    <action name="Execute">
+      <command>leafpad</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+ 
+
+ 
+  <item label="  Nitrogen">
+    <action name="Execute">
+      <command>nitrogen</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+  <item label="  Screenshot">
+    <action name="Execute">
+      <command>xfce4-screenshooter</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+    <item label="  Task Manager">
+    <action name="Execute">
+      <command>lxtask</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+  
+   <item label="  Packages ">
+    <action name="Execute">
+      <command>pamac-manager</command>
+      <startupnotify>
+        <enabled>yes</enabled>
+      </startupnotify>
+    </action>
+  </item>
+
+   <separator />
+    <separator />
+
+  
+  <menu id="apps-favorites-menu" />
+
+  <menu id="app-menu"/>
+  
+  <menu id="system-menu"/>
+  
+
+   <separator />
+    <separator />
+
+  
+    <menu
+   id="dir-menu"
+   label="  Directories"
+   execute="/usr/local/menu/dir-menu.py"
+ />
+ 
+   <separator />
+    <separator />
+ 
+ <menu id="Sessionmenu" label="  Session">
+
+ <item label="⏻  Shutdown">
+        <action name="Execute">
+          <execute>systemctl poweroff</execute>
+        </action>
+      </item>
+      <item label="⏼  Restart">
+        <action name="Execute">
+          <execute>systemctl reboot</execute>
+        </action>
+      </item>
+      <item label="⏾  Sleep">
+        <action name="Execute">
+          <execute>systemctl suspend</execute>
+        </action>
+      </item>
+
+
+  <separator />
+  
+
+  <item label="  Log Out">
+    <action name="Exit">
+      <prompt>yes</prompt>
+    </action>
+  </item>
+  </menu>
+
+</menu>
+
+</openbox_menu>
