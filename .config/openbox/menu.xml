@@ -445,7 +445,14 @@
 ##########################################################
 <menu id="root-menu" label="Openbox 3">
 ##########################################################
- 
+
+<menu id="windowlist" label="  Window List">
+  <menu id="client-list-menu">
+    <action name="ShowMenu">
+      <menu>client-list-menu</menu>
+    </action>
+  </menu>
+</menu>
 
 
 <item label="  Nemo">
