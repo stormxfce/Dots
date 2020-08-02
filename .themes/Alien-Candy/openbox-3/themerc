@@ -34,24 +34,26 @@ window.inactive.title.separator.color: #191919
 window.active.client.color: #191919
 window.inactive.client.color: #191919
 
-window.active.label.text.color: #23b3a7
-window.inactive.label.text.color: #fb90a9
+window.active.label.text.color: #fb90a9
+window.inactive.label.text.color: #23b3a7
 
-window.active.button.unpressed.image.color: #12cfc0
+window.active.button.unpressed.image.color: #fb90a9
 window.active.button.pressed.image.color: #ddb26f
 window.active.button.disabled.image.color: #aaaaaa
-window.active.button.hover.image.color: #fb90a9
+window.active.button.hover.image.color: #12cfc0
 window.active.button.toggled.unpressed.image.color: #777777
 window.active.button.toggled.pressed.image.color: #fd7980
 window.active.button.toggled.hover.image.color: #dddddd
 
-window.inactive.button.unpressed.image.color: #fb90a9
+
+window.inactive.button.unpressed.image.color: #12cfc0
 window.inactive.button.pressed.image.color: #ddb26f
 window.inactive.button.disabled.image.color: #aaaaaa
-window.inactive.button.hover.image.color: #12cfc0
+window.inactive.button.hover.image.color: #fb90a9
 window.inactive.button.toggled.unpressed.image.color: #777777
 window.inactive.button.toggled.pressed.image.color: #fd7980
 window.inactive.button.toggled.hover.image.color: #dddddd
+
 
 window.active.title.bg: flat solid
 window.active.title.bg.color: #191919
