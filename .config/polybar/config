@@ -1,6 +1,6 @@
 ;==========================================================
 ;
-;
+;   
 ;    ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
 ;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
 ;   ██████╔╝  ██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
@@ -35,34 +35,41 @@
 #secondary = #e60053
 #alert = #bd2c40
 
+[colors]
+background = #aa191919
+nearblack = #191919
+foreground = #23b3a7
+altforeground = #156C65
+
+
 ######################
 #       BAR
 ######################
 
 [bar/acandy]
 #monitor = ${env:MONITOR:HDMI-1} 
-width = 96%
-height = 26
-offset-x = 2%
+width = 95.8%
+height = 24
+offset-x = 2.1%
 #offset-y = 94.9%
-offset-y = 1.7%
+offset-y = 2%
 #offset-y = 96.8%
 
 bottom = true
 radius = 0
 
-fixed-center = false
-border-color = #bb000000
+fixed-center = true
+#border-color = #aa191919
 #border-top = 4
 #border-bottom = 4
 #border-left = 4
 #border-right = 4
 
 
-background = #aa191919
+background = ${colors.background}
 
 
-######################
+###################### 
 #       FONTS
 ######################
 
@@ -70,14 +77,17 @@ font-0 = M+ 1p:style=Medium:pixelsize=11;2
 font-1 = Inconsolata for Powerline:style=Medium:pixelsize=22;4:antialias=true
 font-2 = mplus Nerd Font:style=Medium:pixelsize=12;:antialias=true;3
 font-3 = mplus Nerd Font:style=Regular:pixelsize=20:antialias=true;0
+##############   Fonts below are used with the MPD module   #########################
+font-4 = mplus Nerd Font:style=Bold:pixelsize=7:antialias=true;1
+font-5 = mplus Nerd Font:style=Regular:pixelsize=2:antialias=true;0
 
 ######################
 #       MODULELIST
 ######################
 
 modules-left = workspaces da #bspwm #i3 polywins
-modules-center = #mpd
-modules-right = #filesystem #xbacklight #alsa #pulseaudio #xkeyboard #memory #cpu #battery #temperature #eth #wlan db date #powermenu
+modules-center = 
+modules-right = #filesystem #xbacklight #alsa #pulseaudio #xkeyboard #memory #cpu #battery #temperature #eth #wlan db2 mpd db date #powermenu
 
 
 ######################
@@ -89,25 +99,36 @@ modules-right = #filesystem #xbacklight #alsa #pulseaudio #xkeyboard #memory #cp
 type = custom/text
 
 #content = %{T4}  %{T-}
-#content-foreground = #191919
-#content-background = #aa191919
+#content-foreground = ${colors.nearblack}
+#content-background = ${colors.background}
 
 content = " "
-content-foreground = #191919
-content-background = #aa191919
+content-foreground = ${colors.nearblack}
+content-background = ${colors.background}
 
 
 [module/db]
 type = custom/text
 
 content = ""
-content-foreground = #191919
-content-background = #aa191919
+content-foreground = ${colors.nearblack}
+content-background = ${colors.foreground}
 
 #content = %{T4}%{T-}
-#content-foreground = #191919
-#content-background = #aa191919
+#content-foreground = ${colors.nearblack}
+#content-background = ${colors.background}
 
+
+[module/db2]
+type = custom/text
+
+content = ""
+content-foreground = ${colors.foreground}
+content-background = ${colors.background}
+
+#content = %{T4}%{T-}
+#content-foreground = ${colors.nearblack}
+#content-background = ${colors.background}
 
 ########################################
 
@@ -127,13 +148,13 @@ cursor-scroll = ns-resize
 
 
 ######################
-#       MODULES
-######################
+#       MODULES 
+################# ###   
 
 [module/polywins]
 type = custom/script
 exec = ~/.config/polybar/polywins/polywins.sh
-format = "<label>"
+format = "<label>" 
 label = "%output%"
 label-padding = 0
 tail = true
@@ -142,11 +163,11 @@ tail = true
 
 [module/workspaces]
 type = internal/xworkspaces
-pin-workspaces = false
+
 enable-click = true
 enable-scroll = true
-format-foreground = #23b3a7
-format-background = #191919
+format-foreground = ${colors.foreground}
+format-background = ${colors.nearblack}
 format-prefix = " "
 label-empty = " "
 label-active = " "
@@ -255,19 +276,53 @@ label-urgent-padding = 2
 ; label-separator = |
 
 ###############################################
+#
+#                 MPD
+#
+###############################################
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+format-online =  %{T5}<icon-prev>%{T-}  %{T5}<toggle>%{T-}  %{T5}<icon-next>%{T-}  %{T5}<label-time>%{T-}  %{T5}<bar-progress>%{T-}  %{T5}<icon-single>%{T-} 
 
-label-song-maxlen = 25
+########### unused - %{T1}<label-song>%{T-}     %{T5}<icon-stop>%{T-}
+
+label-time = "%elapsed% / %total%"
+
+
+bar-progress-width = 40
+bar-progress-indicator = 
+bar-progress-fill = %{T6}█%{T-}
+bar-progress-empty = %{T6}█%{T-}
+bar-progress-empty-foreground = ${colors.altforeground}
+
+label-song = " %title% "
+
+icon-prev = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+icon-next = 
+icon-single = 
+
+toggle-on-foreground = ${colors.nearblack}
+toggle-off-foreground = ${colors.altforeground}
+
+format-online-foreground = ${colors.nearblack}
+format-online-background = ${colors.foreground}
+format-online-prefix = " "
+format-online-suffix = "  "
+
+label-song-maxlen = 15
 label-song-ellipsis = true
+
+host = 127.0.0.1
+port = 6600
+interval = 1
+label-offline "offline"
+
+
 
 ###############################################
 
@@ -319,7 +374,7 @@ interval = 1
 label = " %percentage_used%% "
 
 label-foreground = #181818
-format-background = #23b3a7
+format-background = ${colors.foreground}
 
 ###############################################
 
@@ -372,19 +427,19 @@ type = internal/date
 interval = 1
 
 date = %A, %B %e  •
-date-alt = " %Y-%m-%d"
+date-alt = 
 
 time = %l:%M:%S %p
-time-alt = %H:%M:%S
+time-alt =%l:%M:%S %p
 
-format-prefix = 
+format-prefix = 
 #format-prefix-foreground = ${colors.foreground-alt}
-format-background = #191919
-format-foreground = #23b3a7
+format-background = ${colors.nearblack}
+format-foreground = ${colors.foreground}
 
 
-label = " %date% %time%  "
-
+#label = "%date% %time%  "
+label = "%time%  "
 ###############################################
 
 [module/pulseaudio]
